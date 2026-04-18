@@ -5,7 +5,7 @@ url: "https://ankitjindal9404.github.io"
 baseurl: ""
 
 # Theme
-remote_theme: minima
+remote_theme: mmistakes/minimal-mistakes
 
 # Personal Info
 author:
@@ -82,3 +82,4 @@ footer: >
 # Plugins (GitHub Pages supported)
 plugins:
   - jekyll-seo-tag
+  - jekyll-include-cache
