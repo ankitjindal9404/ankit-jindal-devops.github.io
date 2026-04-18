@@ -1,1 +1,0 @@
-# ankit-jindal-devops.github.io
