@@ -5,7 +5,7 @@ url: "https://ankitjindal9404.github.io"
 baseurl: ""
 
 # Theme
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: minima
 
 # Personal Info
 author:
