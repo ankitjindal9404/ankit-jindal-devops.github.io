@@ -145,7 +145,7 @@
   #hero {
     min-height: 100vh;
     display: flex; align-items: center;
-    padding-top: 80px;
+    padding-top: 64px;
     position: relative;
     overflow: hidden;
   }
@@ -203,7 +203,7 @@
     line-height: 1.7; margin-bottom: 36px;
   }
 
-  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; position: relative; z-index: 3; }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; position: relative; z-index: 3; }
 
   .btn-primary {
     font-size: 14px; font-weight: 600;
@@ -227,17 +227,7 @@
   }
   .btn-secondary:hover { border-color: var(--accent); color: var(--accent); background: rgba(56,189,248,0.05); }
 
-  .hero-stats {
-    display: flex; gap: 32px; flex-wrap: wrap;
-    padding-top: 24px; border-top: 1px solid var(--border);
-  }
-  .stat-item { }
-  .stat-num {
-    font-family: 'Syne', sans-serif; font-size: 26px;
-    font-weight: 800; color: var(--accent); line-height: 1;
-    margin-bottom: 4px;
-  }
-  .stat-label { font-size: 12px; color: var(--text3); font-family: 'DM Mono', monospace; }
+
 
   /* hero right: terminal card */
   .hero-card {
@@ -275,7 +265,7 @@
   }
 
   /* ── ABOUT ── */
-  #about { padding: 120px 0; }
+  #about { padding: 56px 0; }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
   .about-text p { color: var(--text2); font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
   .about-text p strong { color: var(--text); font-weight: 500; }
@@ -354,8 +344,8 @@
   .tool-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 
   /* ── SKILLS ── */
-  #skills { padding: 120px 0; background: linear-gradient(to bottom, transparent, rgba(15,30,56,0.4), transparent); }
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 48px; }
+  #skills { padding: 56px 0; background: linear-gradient(to bottom, transparent, rgba(15,30,56,0.4), transparent); }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 32px; }
   .skill-cat {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -382,8 +372,8 @@
   }
 
   /* ── EXPERIENCE ── */
-  #experience { padding: 120px 0; }
-  .timeline { position: relative; margin-top: 48px; }
+  #experience { padding: 56px 0; }
+  .timeline { position: relative; margin-top: 32px; }
   .timeline::before {
     content: ''; position: absolute; left: 20px; top: 0; bottom: 0;
     width: 1px; background: linear-gradient(to bottom, var(--accent), var(--purple), transparent);
@@ -423,8 +413,8 @@
   .hl, .hl-green, .hl-purple { font-weight: 600; color: var(--accent); }
 
   /* ── PROJECTS ── */
-  #projects { padding: 120px 0; background: linear-gradient(to bottom, transparent, rgba(15,30,56,0.4), transparent); }
-  .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 48px; }
+  #projects { padding: 56px 0; background: linear-gradient(to bottom, transparent, rgba(15,30,56,0.4), transparent); }
+  .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 32px; }
   .proj-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -453,8 +443,8 @@
   }
 
   /* ── SERVICES ── */
-  #services { padding: 120px 0; }
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 48px; }
+  #services { padding: 56px 0; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 32px; }
   .svc-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -467,8 +457,8 @@
   .svc-desc { font-size: 13.5px; color: var(--text2); line-height: 1.65; }
 
   /* ── EDUCATION ── */
-  #education { padding: 120px 0; background: linear-gradient(to bottom, transparent, rgba(15,30,56,0.4), transparent); }
-  .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 48px; }
+  #education { padding: 56px 0; background: linear-gradient(to bottom, transparent, rgba(15,30,56,0.4), transparent); }
+  .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 32px; }
   .edu-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -482,7 +472,7 @@
   .edu-score { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--green); }
 
   /* ── CONTACT ── */
-  #contact { padding: 120px 0; }
+  #contact { padding: 56px 0; }
   .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
   .contact-info h3 { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 700; color: var(--text); margin-bottom: 16px; line-height: 1.2; }
   .contact-info p { font-size: 15px; color: var(--text2); line-height: 1.7; margin-bottom: 32px; }
@@ -551,7 +541,7 @@
     .hamburger { display: flex; }
   }
   @media (max-width: 600px) {
-    .hero-stats { gap: 20px; }
+
     .tl-item { padding-left: 44px; }
     .timeline::before { left: 12px; }
     .tl-dot { left: 4px; }
@@ -611,24 +601,7 @@
           <a href="#contact" class="btn-primary">Hire Me</a>
           <a href="#projects" class="btn-secondary">View Projects →</a>
         </div>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <div class="stat-num">6+</div>
-            <div class="stat-label">mos experience</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">$3K</div>
-            <div class="stat-label">cloud saved/mo</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">6+</div>
-            <div class="stat-label">govt events</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">3+</div>
-            <div class="stat-label">prod projects</div>
-          </div>
-        </div>
+
       </div>
 
       <div class="hero-right">
@@ -1152,31 +1125,7 @@
     nav.style.background = window.scrollY > 80 ? 'rgba(6,13,26,0.97)' : 'rgba(6,13,26,0.85)';
   });
 
-  // ── COUNTER ANIMATION ──
-  function animateCounters() {
-    document.querySelectorAll('.stat-num').forEach(el => {
-      const text = el.textContent;
-      const num = parseFloat(text.replace(/[^0-9.]/g, ''));
-      const prefix = text.match(/^\D*/)?.[0] || '';
-      const suffix = text.match(/\D+$/)?.[0] || '';
-      if (!num) return;
-      let start = 0; const duration = 1500;
-      const step = (ts) => {
-        if (!start) start = ts;
-        const progress = Math.min((ts - start) / duration, 1);
-        const ease = 1 - Math.pow(1 - progress, 3);
-        el.textContent = prefix + (num < 10 ? (ease * num).toFixed(1) : Math.round(ease * num)) + suffix;
-        if (progress < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    });
-  }
 
-  const heroObs = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) { animateCounters(); heroObs.disconnect(); }
-  }, { threshold: 0.5 });
-  const statsEl = document.querySelector('.hero-stats');
-  if (statsEl) heroObs.observe(statsEl);
 
   // ── CONTACT FORM ──
   document.querySelector('.form-btn').addEventListener('click', () => {
