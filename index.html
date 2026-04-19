@@ -219,14 +219,14 @@
 
   .btn-secondary {
     font-size: 14px; font-weight: 500;
-    padding: 13px 28px; border-radius: 6px;
+    padding: 14px 32px; border-radius: 6px;
     border: 1px solid var(--border2); color: var(--text);
     text-decoration: none; transition: all 0.2s;
-    background: rgba(255,255,255,0.03);
+    background: var(--surface2);
     position: relative; z-index: 3;
     display: inline-block;
   }
-  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); background: rgba(56,189,248,0.05); }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); background: rgba(56,189,248,0.08); }
 
 
 
@@ -542,7 +542,8 @@
     .hamburger { display: flex; }
   }
   @media (max-width: 600px) {
-
+    .hero-btns { flex-direction: row; }
+    .btn-primary, .btn-secondary { flex: 1; text-align: center; padding: 14px 16px; }
     .tl-item { padding-left: 44px; }
     .timeline::before { left: 12px; }
     .tl-dot { left: 4px; }
