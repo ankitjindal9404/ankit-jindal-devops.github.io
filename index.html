@@ -321,17 +321,37 @@
   @keyframes barGrow { from { width: 100%; } to { width: 62.5%; } }
   .cost-bar-note { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--green); }
 
-  .quick-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .qf-item {
+  /* pipeline card */
+  .pipeline-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 10px; padding: 14px 16px;
-    transition: all 0.2s;
+    border-radius: 12px; padding: 20px 22px;
+    transition: all 0.3s;
+    overflow: hidden;
   }
-  .qf-item:hover { border-color: var(--border2); transform: translateY(-2px); }
-  .qf-icon { font-size: 20px; margin-bottom: 8px; }
-  .qf-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
-  .qf-val { font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.4; }
+  .pipeline-card:hover { border-color: var(--border2); }
+  .pipeline-card-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text3); text-transform: uppercase; margin-bottom: 14px; }
+
+  /* tools strip */
+  .tools-strip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 22px;
+    transition: all 0.3s;
+  }
+  .tools-strip:hover { border-color: var(--border2); }
+  .tools-strip-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--text3); text-transform: uppercase; margin-bottom: 14px; }
+  .tools-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tool-badge {
+    display: flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border2);
+    border-radius: 6px; padding: 6px 12px;
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    color: var(--text2); transition: all 0.2s;
+  }
+  .tool-badge:hover { border-color: var(--accent); color: var(--accent); background: rgba(56,189,248,0.05); }
+  .tool-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 
   /* ── SKILLS ── */
   #skills { padding: 120px 0; background: linear-gradient(to bottom, transparent, rgba(15,30,56,0.4), transparent); }
@@ -688,41 +708,67 @@
           </div>
         </div>
 
-        <!-- Cost Optimization Visual -->
-        <div class="cost-card reveal reveal-delay-2">
-          <div class="cost-card-label">// AWS Cost Optimization</div>
-          <div class="cost-bar-row">
-            <span class="cost-bar-from">$8,000/mo</span>
-            <span class="cost-bar-arrow">——→</span>
-            <span class="cost-bar-to">$5,000/mo</span>
-          </div>
-          <div class="cost-bar-track">
-            <div class="cost-bar-fill"></div>
-          </div>
-          <div class="cost-bar-note">↓ 37.5% reduction · Rightsizing + Reserved Instances + Arch Optimization</div>
+        <!-- DevOps Pipeline SVG -->
+        <div class="pipeline-card reveal reveal-delay-2">
+          <div class="pipeline-card-label">// Typical DevOps Workflow</div>
+          <svg viewBox="0 0 380 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+            <defs>
+              <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- connecting line -->
+            <line x1="34" y1="38" x2="346" y2="38" stroke="url(#lineGrad)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+            <!-- nodes -->
+            <!-- Code -->
+            <circle cx="34" cy="38" r="16" fill="#0f1e38" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow)"/>
+            <text x="34" y="43" text-anchor="middle" font-size="14" fill="#38bdf8">⌨</text>
+            <text x="34" y="65" text-anchor="middle" font-size="8" fill="#4d6a8a" font-family="monospace">Code</text>
+            <!-- Build -->
+            <circle cx="96" cy="38" r="16" fill="#0f1e38" stroke="#38bdf8" stroke-width="1.5" opacity="0.85"/>
+            <text x="96" y="43" text-anchor="middle" font-size="13" fill="#38bdf8">⚙</text>
+            <text x="96" y="65" text-anchor="middle" font-size="8" fill="#4d6a8a" font-family="monospace">Build</text>
+            <!-- Test -->
+            <circle cx="158" cy="38" r="16" fill="#0f1e38" stroke="#7dd3fc" stroke-width="1.5" opacity="0.85"/>
+            <text x="158" y="43" text-anchor="middle" font-size="13" fill="#7dd3fc">✓</text>
+            <text x="158" y="65" text-anchor="middle" font-size="8" fill="#4d6a8a" font-family="monospace">Test</text>
+            <!-- Deploy -->
+            <circle cx="220" cy="38" r="16" fill="#0f1e38" stroke="#a78bfa" stroke-width="1.5" opacity="0.85"/>
+            <text x="220" y="43" text-anchor="middle" font-size="13" fill="#a78bfa">🚀</text>
+            <text x="220" y="65" text-anchor="middle" font-size="8" fill="#4d6a8a" font-family="monospace">Deploy</text>
+            <!-- Monitor -->
+            <circle cx="282" cy="38" r="16" fill="#0f1e38" stroke="#4ade80" stroke-width="1.5" opacity="0.85"/>
+            <text x="282" y="43" text-anchor="middle" font-size="13" fill="#4ade80">📊</text>
+            <text x="282" y="65" text-anchor="middle" font-size="8" fill="#4d6a8a" font-family="monospace">Monitor</text>
+            <!-- Optimize -->
+            <circle cx="346" cy="38" r="16" fill="#0f1e38" stroke="#4ade80" stroke-width="1.5" filter="url(#glow)" opacity="0.9"/>
+            <text x="346" y="43" text-anchor="middle" font-size="13" fill="#4ade80">♻</text>
+            <text x="346" y="65" text-anchor="middle" font-size="8" fill="#4d6a8a" font-family="monospace">Optimize</text>
+            <!-- active pulse on Deploy -->
+            <circle cx="220" cy="38" r="20" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.3">
+              <animate attributeName="r" values="16;24;16" dur="2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
         </div>
 
-        <!-- Quick Facts Grid -->
-        <div class="quick-facts reveal reveal-delay-3">
-          <div class="qf-item">
-            <div class="qf-icon">📍</div>
-            <div class="qf-label">Based In</div>
-            <div class="qf-val">Delhi, India · Remote OK</div>
-          </div>
-          <div class="qf-item">
-            <div class="qf-icon">☁️</div>
-            <div class="qf-label">Primary Cloud</div>
-            <div class="qf-val">AWS · Multi-tenant Infra</div>
-          </div>
-          <div class="qf-item">
-            <div class="qf-icon">🎓</div>
-            <div class="qf-label">Education</div>
-            <div class="qf-val">B.Com IGNOU · DevOps Cert</div>
-          </div>
-          <div class="qf-item">
-            <div class="qf-icon">🤝</div>
-            <div class="qf-label">Availability</div>
-            <div class="qf-val">Freelance · Full-time</div>
+        <!-- Daily Tools Strip -->
+        <div class="tools-strip reveal reveal-delay-3">
+          <div class="tools-strip-label">// Tools I Ship With Daily</div>
+          <div class="tools-row">
+            <span class="tool-badge"><span class="tool-dot" style="background:#FF9900"></span>AWS</span>
+            <span class="tool-badge"><span class="tool-dot" style="background:#2496ED"></span>Docker</span>
+            <span class="tool-badge"><span class="tool-dot" style="background:#326CE5"></span>Kubernetes</span>
+            <span class="tool-badge"><span class="tool-dot" style="background:#7B42BC"></span>Terraform</span>
+            <span class="tool-badge"><span class="tool-dot" style="background:#E6522C"></span>Prometheus</span>
+            <span class="tool-badge"><span class="tool-dot" style="background:#F46800"></span>Grafana</span>
+            <span class="tool-badge"><span class="tool-dot" style="background:#2088FF"></span>GitHub Actions</span>
+            <span class="tool-badge"><span class="tool-dot" style="background:#EE0000"></span>ArgoCD</span>
           </div>
         </div>
 
