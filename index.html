@@ -123,7 +123,7 @@
 
   /* ── SECTIONS COMMON ── */
   section { position: relative; z-index: 1; }
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 5%; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 2; }
 
   .section-eyebrow {
     font-family: 'DM Mono', monospace;
@@ -163,6 +163,7 @@
   .hero-inner {
     display: grid; grid-template-columns: 1fr 380px;
     gap: 60px; align-items: center; width: 100%;
+    position: relative; z-index: 2;
   }
 
   .hero-tag {
@@ -202,7 +203,7 @@
     line-height: 1.7; margin-bottom: 36px;
   }
 
-  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; position: relative; z-index: 3; }
 
   .btn-primary {
     font-size: 14px; font-weight: 600;
@@ -210,6 +211,8 @@
     background: var(--accent); color: var(--navy);
     text-decoration: none; transition: all 0.2s;
     letter-spacing: 0.02em;
+    position: relative; z-index: 3;
+    display: inline-block;
   }
   .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(56,189,248,0.3); }
 
@@ -219,6 +222,8 @@
     border: 1px solid var(--border2); color: var(--text);
     text-decoration: none; transition: all 0.2s;
     background: rgba(255,255,255,0.03);
+    position: relative; z-index: 3;
+    display: inline-block;
   }
   .btn-secondary:hover { border-color: var(--accent); color: var(--accent); background: rgba(56,189,248,0.05); }
 
@@ -550,7 +555,7 @@
         <div class="hero-title">
           <span id="typewriter">DevOps & Cloud Engineer</span><span class="type-cursor">_</span>
         </div>
-        <p class="hero-tagline">Cloud & DevOps Engineer — specializing in infrastructure, CI/CD, and Kubernetes. I help startups and companies build reliable, cost-efficient, and scalable systems.</p>
+        <p class="hero-tagline">Helping startups scale with cost-efficient, secure, and automated cloud infrastructure. Based in Delhi, India.</p>
         <div class="hero-btns">
           <a href="#contact" class="btn-primary">Hire Me</a>
           <a href="#projects" class="btn-secondary">View Projects →</a>
