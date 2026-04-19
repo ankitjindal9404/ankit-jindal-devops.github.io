@@ -415,15 +415,12 @@
   .tl-date { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text3); margin-top: 4px; }
   .tl-bullets { list-style: none; margin-top: 8px; }
   .tl-bullets li {
-    font-size: 14px; color: var(--text2); padding: 5px 0;
-    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 14px; color: var(--text2); padding: 6px 0;
+    display: grid; grid-template-columns: 14px 1fr; gap: 10px;
+    line-height: 1.65;
   }
-  .tl-bullets li::before { content: '▸'; color: var(--accent); font-size: 10px; margin-top: 4px; flex-shrink: 0; }
-  .highlight-pill {
-    display: inline-block; font-family: 'DM Mono', monospace;
-    font-size: 11px; padding: 2px 8px; border-radius: 4px;
-    background: rgba(56,189,248,0.1); color: var(--accent); margin-left: 4px;
-  }
+  .tl-bullets li::before { content: '▸'; color: var(--accent); font-size: 10px; margin-top: 4px; }
+  .hl, .hl-green, .hl-purple { font-weight: 600; color: var(--accent); }
 
   /* ── PROJECTS ── */
   #projects { padding: 120px 0; background: linear-gradient(to bottom, transparent, rgba(15,30,56,0.4), transparent); }
@@ -875,11 +872,11 @@
             <span class="tl-badge">● Current</span>
           </div>
           <ul class="tl-bullets">
-            <li>Reduced AWS monthly spend from <span class="highlight-pill">$8,000 → $5,000</span> — 37.5% cost cut through rightsizing, reserved instances, and architecture optimization.</li>
-            <li>Owned full DevOps lifecycle for <strong>Pace</strong> — a multi-tenant website builder (like WordPress/Wix) supporting custom domains and drag-and-drop editing.</li>
-            <li>Managed infrastructure for <strong>Cultivaite</strong>, an ML-powered chatbot platform for the spices industry with data intelligence capabilities.</li>
-            <li>Supported production-grade infrastructure for <strong>6+ national government events</strong>: Indian AI Impact Summit, Aahar, Bharat Shiksha, Bharat Tex, IFEX, DIC — ensuring zero downtime at scale.</li>
-            <li>Set up end-to-end observability — dashboards, alerting, and incident response workflows using CloudWatch and monitoring tools.</li>
+            <li><span>Reduced AWS monthly spend from <span class="hl-green">$8,000 → $5,000/mo</span> — 37.5% cost cut through rightsizing, reserved instances, and architecture optimization.</span></li>
+            <li><span>Owned full DevOps lifecycle for <span class="hl">Pace</span> — a multi-tenant website builder (like WordPress/Wix) with custom domains and drag-and-drop editing.</span></li>
+            <li><span>Managed infrastructure for <span class="hl">Cultivaite</span>, an ML-powered chatbot platform for the spices industry with data intelligence capabilities.</span></li>
+            <li><span>Supported production-grade infra for <span class="hl-purple">6+ national government events</span> — Indian AI Impact Summit, Aahar, Bharat Shiksha, Bharat Tex, IFEX, DIC — zero downtime at scale.</span></li>
+            <li><span>Set up end-to-end observability — dashboards, alerting, and incident response workflows using <span class="hl">CloudWatch</span> and monitoring tooling.</span></li>
           </ul>
         </div>
       </div>
@@ -895,11 +892,11 @@
             </div>
           </div>
           <ul class="tl-bullets">
-            <li>Built and maintained CI/CD pipelines using <strong>GitHub Actions</strong> for automated testing and deployment workflows.</li>
-            <li>Containerized applications using <strong>Docker & Kubernetes</strong>, enabling portable, scalable deployments.</li>
-            <li>Implemented comprehensive monitoring using <strong>Prometheus, Grafana, and CloudWatch</strong>.</li>
-            <li>Set up centralized logging with the <strong>ELK Stack</strong> for improved troubleshooting and log analysis.</li>
-            <li>Wrote automation scripts in <strong>Python and Bash</strong> to streamline repetitive operational tasks.</li>
+            <li><span>Built and maintained CI/CD pipelines using <span class="hl">GitHub Actions</span> for automated testing and deployment workflows.</span></li>
+            <li><span>Containerized applications using <span class="hl">Docker & Kubernetes</span>, enabling portable, scalable deployments across environments.</span></li>
+            <li><span>Implemented comprehensive monitoring using <span class="hl">Prometheus, Grafana</span> and <span class="hl">CloudWatch</span> for full observability.</span></li>
+            <li><span>Set up centralized logging with the <span class="hl-purple">ELK Stack</span> for improved troubleshooting and log analysis.</span></li>
+            <li><span>Wrote automation scripts in <span class="hl-green">Python and Bash</span> to streamline repetitive operational tasks and reduce manual toil.</span></li>
           </ul>
         </div>
       </div>
